@@ -3,7 +3,11 @@ import axiosRetry from "axios-retry";
 import {toastr} from 'react-redux-toastr'
 import {NotificationService} from 'r3-tooling-design-system';
 import SnackbarComponent from '../components/SnackbarComponent';
-export const SERVER_BASE_URL = "http://localhost:8580";
+
+let pathSegments = document.location.pathname.split('/');
+pathSegments = pathSegments.slice(0, -1);
+pathSegments.push('server');
+export const SERVER_BASE_URL = `https://${document.location.hostname}/${pathSegments.join('/')}`;
 export const LOAD_APP_STATE = "LOAD_APP_STATE";
 export const SERVER_AWAKE = 'SERVER_AWAKE';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';

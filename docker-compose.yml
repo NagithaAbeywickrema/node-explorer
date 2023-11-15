@@ -3,7 +3,7 @@ services:
   node-explorer:
     image: r3dockerhub/node-explorer:v0.1.2
     ports:
-      - "3000:80"
+      - "30361:80" #TODO:set before image creation
     restart: always
     depends_on:
       - node-server
@@ -11,7 +11,7 @@ services:
   node-server:
     image: r3dockerhub/node-server:v0.1.2
     ports:
-      - "8580:8580"
+      - "30463:8580" #TODO:set before image creation
     restart: always
     volumes:
       - ${CORDAPPS_PATH}:/cordapps
