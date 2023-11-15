@@ -8,6 +8,7 @@ let pathSegments = document.location.pathname.split('/');
 pathSegments = pathSegments.slice(0, -1);
 pathSegments.push('server');
 export const SERVER_BASE_URL = `https://${document.location.hostname}/${pathSegments.join('/')}`;
+console.log(`NIATMP: ${SERVER_BASE_URL}`);
 export const LOAD_APP_STATE = "LOAD_APP_STATE";
 export const SERVER_AWAKE = 'SERVER_AWAKE';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
