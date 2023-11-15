@@ -3,7 +3,7 @@ services:
   node-explorer:
     image: r3dockerhub/node-explorer:v0.1.2
     ports:
-      - "30361:80" #TODO:set before image creation
+      - "30461:80" #TODO:set before image creation
     restart: always
     depends_on:
       - node-server
